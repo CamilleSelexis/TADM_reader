@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>TADM_reader_64.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="KBI_CellCultivationIcon.png" />
+    <None Remove="KBI_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="{215d64d2-031c-33c7-96e3-61794cd1ee61}">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>4</VersionMinor>
+      <VersionMajor>2</VersionMajor>
+      <Guid>215d64d2-031c-33c7-96e3-61794cd1ee61</Guid>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TADM_reader_64.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Plotly.NET" Version="5.1.0" />
+    <PackageReference Include="Plotly.NET.CSharp" Version="0.13.0" />
+    <PackageReference Include="System.Data.OleDb" Version="10.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="KBI_CellCultivationIcon.png" />
+    <Resource Include="KBI_logo.png" />
+  </ItemGroup>
+
+</Project>
